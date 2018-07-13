@@ -23,6 +23,12 @@ app.post('/deviations', (req, res) => {
     // console.log(serverDeviations)
 });
 
+app.delete('/deviations', (req, res) => {
+
+    serverDeviations = []
+    // console.log(serverDeviations)
+});
+
 app.get('/deviations', (req, res) => {
     res.send(serverDeviations);
 
