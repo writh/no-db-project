@@ -12,6 +12,17 @@ class Deviations extends Component {
        this.getDeviations()
     }
 
+    deleteDeviations() {
+        axios.delete('/deviations')
+        .then(response => {
+            this.setState({
+                serverDeviations: [
+                    ...response.data,
+                ],
+            })
+        })
+    }
+
     getDeviations() {
         axios.get('/deviations')
         .then(response => {
